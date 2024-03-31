@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于2012你还记得多少</title>
+    <body>
+
+    </body>
+
+</head>
+<body>
+    <div id="i1">
+      <div style="text-align:center;">
+      <img src="20131711872780_.pic.jpg">
+      <img src="20161711872781_.pic.jpg">
+      <img src="20141711872780_.pic.jpg">
+      <img src="20151711872781_.pic.jpg">
+    </br></br>
+    </div>
+  </style>
+<div style="text-align:center;">
+
+<audio controls style="background:none;width:300px;height: 30px;">
+  <source src="胡夏-那些年.mp3" type="audio/mpeg">
+</audio>
+
+<audio controls style="background:none;width:300px;height: 30px;">
+  <source src="PSY (朴载相)-江南style.mp3" type="audio/mpeg">
+</audio>
+
+<audio controls style="background:none;width:300px;height: 30px;">
+  <source src="吴莫愁-就现在.mp3" type="audio/mpeg">
+</audio>
+
+<audio controls style="background:none;width:300px;height: 30px;">
+  <source src="苏打绿-我好想你 (I Miss You So).mp3" type="audio/mpeg">
+</audio>
+</div>
+</style>
+<br>
+  <div style="text-align:center;">
+        <span>以下哪首歌曲于2012年发表：</span>
+        <span><p>请输入歌名：</p></span>
+        <input type="text" id="text">
+        <input type="button" value="猜" id="guess">
+        <br>
+        <span>您已经猜的次数：</span>
+        <span id="count">0</span>
+        <br>
+        结果：<span class="c1"></span>
+        <br>
+        <br>
+        <input type="button" value="重新开始游戏" id="reBu">
+    </div>
+</body>
+</style>
+<script>
+    var text = document.querySelector("#text");
+    var count = document.querySelector("#count");
+    var result = document.querySelector(".c1");
+    var guessBu = document.querySelector("#guess");
+    var reBu = document.querySelector("#reBu");
+    var sum = 0;
+    guessBu.onclick = function(){
+        sum++;
+        count.innerHTML = sum;
+        var userGuess = parseInt(text.value);
+        if(userGuess = "江南style"){
+            result.innerHTML = "恭喜您，您猜对了！";
+            result.style.color = "green";
+        }
+        else {
+            result.innerHTML = "很遗憾，您猜错了！";
+            result.style.color = "red";
+          }
+    }
+    reBu.onclick = function(){
+        sum = 0;
+        count.innerHTML = sum;
+        result.innerHTML = "";
+        text.value = "";
+    }
+
+
+</script>
+</html>
